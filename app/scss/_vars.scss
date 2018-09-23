@@ -1,6 +1,11 @@
-$default-font: "roboto-example", sans-serif;
-$accent: orange;
-$text: #333;
-$mainColor: red;
-//$mainFont: 'Roboto', sans-serif;
+$default-font: "NunitoSansRegular", sans-serif;
+$light-font: "NunitoSansLight", sans-serif;
+$italic-font: "NunitoSansItalic", sans-serif;
+$bold-font: "NunitoSansBold", sans-serif;
+$extra-font: "NunitoSansExtraBold", sans-serif;
+
+$text-color: #676c75;
+$backgroundColor: #f8f9fa;
+$mainColor: linear-gradient(to right, #ff8e64, #ffe641) ;
+
 

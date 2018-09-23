@@ -3,27 +3,22 @@
 @import "libs";
 @import "reset";
 
-
-::placeholder {
-	color: #666;
-}
-
-::selection {
-	background-color: $accent;
-	color: #fff;
-}
-
+// Main css >> BEGI
 body {
+	background: $backgroundColor;
 	font-size: 16px;
 	min-width: 320px;
 	position: relative;
 	line-height: 1.65;
 	font-family: $default-font;
 	overflow-x: hidden;
-	color: $text;
-	input, textarea {
-		border: #666 1px solid;
+	color: $text-color;
+	padding-bottom: 500px;
+	input, textarea, select {
+		border: #e7e8ea 1px solid;
 		outline: none;
+		border-radius: 6px;
+		padding: 15px 20px;
 		&:focus:required:invalid {
 			border-color: red;
 		}
@@ -31,7 +26,511 @@ body {
 			border-color: green;
 		}
 	}
+	.container{
+		max-width: 1170px;
+		margin: 0 auto;  
+	}
+	.flex{
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+	.button{
+		font-family: $bold-font;
+		font-size: 17px;
+		padding: 10px 20px;
+		letter-spacing: 1px;
+		text-align: center;
+		background: $mainColor;
+		border-radius: 6px;
+		cursor: pointer;
+		box-shadow: 0px 6px 12px 0px rgba(40, 43, 49, .08);
+		&-white{
+			background: #fff;
+			color: #282b31;
+		}
+	}
+	.tablet{
+		max-width: 470px;
+		border-radius: 60px;
+		box-shadow:  0px 3px 6px 0px rgba(32, 33, 39, .12), 
+			inset  0px -2px 6px 0px rgba(40, 43, 49, .06);
+			img{
+				width: 100%;
+			}
+	}
+	h2{
+		font-size: 35px;
+		font-family: $light-font;
+		font-weight: 100;
+		line-height: 50px;
+		letter-spacing: 1px;
+		margin-bottom: 15px;
+		color: #282b31;
+		span{
+			font-family: $bold-font;
+		}
+		&+p{
+			line-height: 30px;
+		}
+	}
+}
+::placeholder {
+	color: #b9bdc3;
+	font-family: $default-font;
+}
+// Main css >> END
+
+
+.header-intro{ 
+	color: #fff;
+	background: url(../img/section-bg.jpg) center;
+	background-size: cover;
+	.container{
+		position: relative;
+	}
+	.header{
+		padding-top: 25px;
+		margin-bottom: 165px;
+		&_logo{
+			font-size: 20px;
+			font-family: $extra-font;
+		}
+		&_nav-menu{
+			li{
+				float: left;
+				font-size: 15px;
+				margin-right: 30px;
+				cursor: pointer;
+			}
+		}
+		&_nav-button{
+			font-size: 14px;
+			color: #282b31;
+			padding: 10px 20px;
+			background: #fff;
+			text-transform: uppercase;
+			border-radius: 7px;
+			cursor: pointer;
+			margin-right: 30px;
+			letter-spacing: 1px;
+		}
+		&_nav-burger{
+			cursor: pointer;
+			span{
+				width: 16px;
+				height: 2px;
+				border-radius: 2px;
+				display: block;
+				background: #fff;
+				margin-bottom: 4px;
+			}
+		}
+	}
+	.intro{
+		&-content{
+			width: 45%;
+		}
+		&-logo{
+			width: 90px;
+			margin-bottom: 35px;
+		}
+		&-text{
+			font-size: 35px;
+			font-family: $light-font;
+			font-weight: 100;
+			line-height: 50px;
+			letter-spacing: 1px;
+			margin-bottom: 35px;
+			span{
+				font-family: $extra-font;
+			}
+		}
+		&-buttons{
+			justify-content: flex-start;
+			margin-bottom: 180px;
+			& > div:not(:last-child){
+				margin-right: 20px;
+			}
+		}
+		&-img{
+			position: absolute;
+			right: 0;
+			top: 20%;
+		}
+	}
+}
+.features{
+	padding: 250px 0 120px 0;
+	&-blocks{
+		max-width: 470px;
+		.block{
+			max-width: 370px;
+			padding: 30px 30px 30px 75px;
+			&-title{
+				font-family: $light-font;
+				font-weight: 100;
+				line-height: 20px;
+				color: #282b31;
+				margin-bottom: 10px;
+				position: relative;
+				span{
+					font-family: $extra-font;
+				}
+				&:before{
+					content: '';
+					position: absolute;
+					left: -35px;
+					top: 0;
+					background: url(../img/features-icons.png) no-repeat;
+					width: 25px;
+					height: 25px;
+				}
+				&-1:before{
+					background-position: 0px -13px;
+				}
+				&-2:before{
+					background-position: 0px -108px;
+				}
+				&-3:before{
+					background-position: 0px -206px;
+				}
+			}
+			.icon{
+					&:before{
+						background-position: 10px 10px;
+					}
+				}
+			&-text{
+				font-size: 14px;
+				line-height: 25px;
+			}
+		}
+	}
+}
+.get-started{
+	padding: 75px 0;
+	background: url(../img/get-started-bg.jpg) center;
+	background-size: cover;
+	color: #fff;
+	&-text{
+		width: 50%;
+		h2{
+			color: #fff;
+		}
+	}
+	&-buttons{
+		.button{
+			padding: 10px 30px;
+		}
+		& > div:not(:last-child){
+			margin-right: 20px;
+		}
+	}
+}
+.advantages{
+	padding: 120px 0;
+	.blocks{
+		 align-items: stretch;
+		.block{
+			width: 50%;
+			text-align: center;
+			box-sizing: border-box;
+		}
+		.block-text{
+			background: #fff;
+			padding: 180px 105px;
+			h2{
+				color: #282b31;
+			}
+		}
+		.block-img{
+			background: url(../img/advantages-bg.jpg) center;
+			background-size: cover;
+			overflow: hidden;
+			position: relative;
+			img{
+				width: 405px;
+				margin-top: 95px;
+				position: absolute;
+				transform: translate(-50%);
+			}
+		}
+	}
+}
+.video{
+	padding: 115px 0 160px 0;
+	text-align: center;
+	background: url(../img/video-bg.jpg) center;
+	background-size: cover;
+	color: #fff;
+	h2{
+		color: #fff;
+		&+p{
+			width: 50%;
+			margin: 0 auto 50px auto;
+		}
+	}
+	&-play{
+		width: 70px;
+		height: 70px;
+		margin: 0 auto;
+		border-radius: 50%;
+		background: #fff;
+		position: relative;
+		cursor: pointer;
+		.triangle {
+			position: absolute;
+			top: 53%;
+			left: 58%;
+			transform: translate(-50%, -50%);
+			width: 25px;
+			height: 25px;
+			background: url(../img/video-play-icon.png) no-repeat;
+			z-index: 999;
+		}
+		.circle{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			border-radius: 50%;
+			width: 60px;
+			height: 60px;
+			border: 3px solid #fff;
+			opacity: .5;
+			&-1{
+				animation: circle 3s linear infinite;
+			}
+			&-2{
+				animation: circle 3s linear infinite 1s;
+			}
+			&-3{
+				animation: circle 3s linear infinite 2s;
+			}
+		}
+	}
+}
+.pricing{
+	padding: 140px 0;
+	.container{
+		align-items: baseline ;
+	}
+	&-text{
+		width: 30%;
+		h2{
+			color: #282b31;
+			&+p{
+				margin-bottom: 20px;
+			}
+		}
+		.licence{
+			&-text{
+				display: inline-block;
+			}
+			&-value{
+				display: inline-block;
+				position: relative;
+				margin-bottom: 20px;
+				select{
+					background: #fff;
+					padding: 10px 60px 10px 15px;
+					font-size: 14px;
+					font-family: $default-font;
+					line-height: 22px;
+					appearance: none;
+					box-shadow: 0px 2px 6px 0px rgba(40, 43, 49, .08);
+					margin-left: 10px;
+					border: 0;
+					border-radius: 4px;
+				}
+				&:after{
+						content: '';
+						position: absolute;
+						top: 50%;
+						right: 10px;
+						transform: translateY(-50%);
+						display: block;
+						border: 0 solid transparent;
+						border-left-width: 5px;
+						border-right-width: 5px;
+						border-top: 5px solid #b9bdc3;
+						z-index: 999;
+					}
+			}
+		}
+		.promo{
+			&-input,
+			&-button{
+				box-shadow: 0px 2px 6px 0px rgba(40, 43, 49, .08);
+			}
+			&-input{
+				padding: 12px 15px;
+			}
+			&-button{
+				color: #fff;
+				font-size: 14px;
+				padding: 9px 40px;
+				font-family: $bold-font;
+				letter-spacing: 1px;
+				background: linear-gradient(to right, #7956ec, #2fb9f8);
+			}
+		}
+	}
+	&-blocks{
+		width: 60%;
+		.block{
+			position: relative;
+			width: 49%;
+			align-self:  stretch;
+			background: #fff;
+			border-radius: 12px;
+			text-align: center;
+			padding: 50px 0 120px 0;
+			box-shadow: 0px 1px 3px 0px rgba(32, 33, 39, .12);
+			transition: all .3s;
+			&-name{
+				display: block;
+				background: #f8f9fa;
+				text-transform: uppercase;
+				font-size: 11px;
+				font-family: $bold-font;
+				letter-spacing: 2px;
+				padding: 15px;
+				box-shadow: 0px 1px 0px 0px #e7e8ea, inset 0px 1px 0px 0px #e7e8ea;
+				margin-bottom: 30px;
+			}
+			&-price{
+				height: 80px;
+				font-family: $light-font;
+				font-weight: 100;
+				font-size: 40px;
+				color: #282b31;
+				margin-bottom: 20px;
+				transition: all .3s; 
+			}
+			&-list{
+				text-align: left;
+				margin-bottom: 40px;
+				padding: 0 50px 0 80px;
+				line-height: 30px;
+				li{
+					position: relative;
+					font-size: 15px;
+					&:before{
+						position: absolute;
+						left: -25px;
+						top: 10%;
+						content: '✓';
+						width: 20px;
+						height: 20px;
+						color: #999ea8;
+					}
+				}
+			}
+			&-button{
+				position: absolute;
+				bottom: 60px;
+				left: 50%;
+				transform: translateX(-50%);
+				background: linear-gradient(to right, #009fc5, #3cecb0);
+				color: #fff;
+				min-width: 65%;
+				cursor: pointer;
+			}
+			&:hover{
+				background: url(../img/price-active-bg.png) center;
+				background-size: cover;
+				color: #fff;
+				transform: scale(1.1);
+				z-index: 999;
+			}
+			&:hover .block-name{
+				background: rgba(255, 255, 255, .07);
+				box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, .3), 
+					inset 0px 1px 0px 0px rgba(255, 255, 255, .3);
+			}
+			&:hover .block-price{
+				color: #fff;
+				font-size: 60px;
+				margin-bottom: 20px;
+			}
+			&:hover .block-list li:before{
+				color: #fff;
+				opacity: .6;
+			}
+			&:hover .block-button{
+				background: $mainColor;
+			}
+		}
+	}
+}
+.send-message{
+	background: url(../img/section-bg.jpg) center;
+	background-size: cover;
+	padding: 120px 0;
+	text-align: center;
+	color: #fff;
+	h2{
+		color: #fff;
+		&+p{
+			width: 50%;
+			margin: 0 auto 60px auto;
+		}
+	}
+	.form{
+		width: 65%	;
+		background: #fff;
+		display: inline-block;
+		border-radius: 12px;
+		padding: 70px;
+		box-shadow: 0px 12px 24px 0px rgba(40, 43, 49, .16);
+		input, textarea, select{
+			background: $backgroundColor;
+			color: #b9bdc3;
+			font-size: 17px;
+			font-family: $default-font;
+		}
+		input[type=text], select{
+			width: 47%;
+			box-sizing: border-box;
+			margin-bottom: 20px;
+		}
+		textarea{
+			width: 100%;
+			box-sizing: border-box;
+			margin-bottom: 30px;
+		}
+		input[type=submit]{
+			background: $mainColor;
+			color: #fff;
+			padding: 15px 25px;
+		}
+	}
 }
 
+
+
+
+
+
+
+
+
+@keyframes circle {
+	from {
+		opacity: .5;
+		width: 60px;
+		height: 60px;
+		border: 3px solid #fff;
+	}
+	to {
+		opacity: .1;
+		width: 130px;
+		height: 130px;
+		border: 1px solid #fff;
+	}
+}
 
 @import "media"; // Always at the end

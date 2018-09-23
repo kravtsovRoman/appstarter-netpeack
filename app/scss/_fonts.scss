@@ -1,4 +1,11 @@
+//Import fonts START
+
 @import "_mixins/font-face";
 
-@include font-face("roboto-example", "../fonts/RobotoRegular/RobotoRegular");
-@include font-face("roboto-example", "../fonts/RobotoBold/RobotoBold", bold);
+@include font-face("NunitoSansRegular", "../fonts/NunitoSansRegular/NunitoSansRegular");
+@include font-face("NunitoSansLight", "../fonts/NunitoSansLight/NunitoSansLight");
+@include font-face("NunitoSansItalic", "../fonts/NunitoSansItalic/NunitoSansItalic");
+@include font-face("NunitoSansBold", "../fonts/NunitoSansBold/NunitoSansBold");
+@include font-face("NunitoSansExtraBold", "../fonts/NunitoSansExtraBold/NunitoSansExtraBold");
+
+//Import fonts END
