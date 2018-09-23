@@ -3,31 +3,35 @@
 
 <head>
 	<meta charset="utf-8">
-
 	<title>AppStarter</title>
 	<meta name="description" content="">
-
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 	<link rel="icon" href="img/favicon/favicon.ico">
 	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.ico">
-
 	<link rel="stylesheet" href="css/main.min.css">
-
 </head>
 
 <body>
-	<section class="header-intro">
+	<header class="header-intro">
 		<div class="container">
 			<header class="header flex">
-			<div class="header_logo">AppStarter</div>
+			<a href="index.html" class="header_logo">AppStarter</a>
 			<div class="flex">
-				<ul class="header_nav-menu">
-					<li>Features</li>
-					<li>Video Tour</li>
-					<li>Reviews</li>
-					<li>Pricing</li>
+				<ul class="header_nav-menu anhcors">
+					<li>
+						<a href="#features">Features</a>
+					</li>
+					<li>
+						<a href="#video">Video Tour</a>
+					</li>
+					<li>
+						<a href="#advantages">Reviews</a>
+					</li>
+					<li>
+						<a href="#pricing">Pricing</a>
+					</li>
 				</ul>
 				<div class="header_nav-button button">Get it free</div>
 				<div class="header_nav-burger">
@@ -39,7 +43,7 @@
 		</header>
 		<div class="intro flex">
 			<div class="intro-content">
-				<img class="intro-logo" src="../img/logo.png" alt="">
+				<img class="intro-logo" src="./img/logo.png" alt="Best landing page for web and mobile apps ">
 				<h1 class="intro-text">
 					<span>AppStarter.</span> Best landing page for web and mobile apps 
 				</h1>
@@ -49,15 +53,15 @@
 				</div>
 			</div>
 			<div class="intro-img tablet">
-				<img src="../img/tablet.png" alt="AppStarter. Best landing page for web and mobile apps">
+				<img src="./img/tablet.png" alt="AppStarter. Best landing page for web and mobile apps">
 			</div>
 		</div>
 		</div>
-	</section>
-	<section class="features">
+	</header>
+	<section class="features" id="features">
 		<div class="container flex">
 			<div class="features-img tablet">
-				<img src="../img/features-tablet.png" alt="AppStarter. Features text">
+				<img src="./img/features-tablet.png" alt="AppStarter. Features text">
 			</div>
 			<div class="features-blocks">
 				<div class="block">
@@ -95,11 +99,11 @@
 			</div>
 		</div>
 	</section>
-	<section class="advantages">
+	<section class="advantages" id="advantages">
 		<div class="container">
 			<div class="blocks flex">
 				<div class="block block-img">
-					<img src="../img/advantages-tablet1.png" alt="Perfect landing page for your app">
+					<img src="./img/advantages-tablet1.png" alt="Perfect landing page for your app">
 				</div>
 				<div class="block block-text">
 					<h2><span>Perfect</span> landing page for your app</h2>
@@ -114,13 +118,13 @@
 					</p>
 				</div>
 				<div class="block block-img">
-					<img src="../img/advantages-tablet2.png" alt="Style guide and sample pages included">
+					<img src="./img/advantages-tablet2.png" alt="Style guide and sample pages included">
 				</div>
 				
 			</div>
 		</div>
 	</section>
-	<section class="video">
+	<section class="video" id="video">
 		<div class="container">
 			<h2><span>Watch</span> video tour</h2>
 			<p>
@@ -134,7 +138,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="pricing">
+	<section class="pricing" id="pricing">
 		<div class="container flex">
 			<div class="pricing-text">
 				<h2><span>Choose</span> your plan</h2>
@@ -201,25 +205,43 @@
 				</div>
 				<div class="flex">
 					<select name="">
-						<option value="">Country</option>
-						<option value=""></option>
-						<option value=""></option>
-						<option value=""></option>
+						<option>Country</option>
+						<option value="Ukraine">Ukraine</option>
+						<option value="Russia">Russia</option>
+						<option value="USA">USA</option>
 					</select>
 					<select name="">
-						<option value="">City</option>
-						<option value=""></option>
-						<option value=""></option>
-						<option value=""></option>
+						<option>City</option>
+						<option value="Kiev">Kiev</option>
+						<option value="Moscow">Moscow</option>
+						<option value="New York">New York</option>
 					</select>
 				</div>
-				<textarea name="area"  cols="30" rows="10" placeholder="Message..."></textarea>
+				<textarea name="area"  cols="10" rows="7" placeholder="Message..."></textarea>
 				<input class="button" type="submit" value="Send Message">
 			</form>
 		</div>
 	</section>
+	<footer class="footer">
+		<div class="container flex">
+			<div class="footer-logo">
+				<h3>AppStarter</h3>
+			</div>
+			<div class="footer-copyright">
+				<p>Created with  by 
+					<span class="heart">&#10084;</span> 
+					<a href="#">Sergey Azovskiy</a>
+				</p>
+				<p>© AppStarter, 2017</p>
+			</div>
+			<div class="footer-social flex">
+				<div class="block"></div>
+				<div class="block facebook"></div>
+				<div class="block"></div>
+			</div>
+		</div>
+	</footer>
 
 	<script src="js/scripts.min.js"></script>
-
 </body>
 </html>

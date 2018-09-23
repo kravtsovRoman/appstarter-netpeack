@@ -5,20 +5,19 @@
 
 // Main css >> BEGI
 body {
-	background: $backgroundColor;
-	font-size: 16px;
 	min-width: 320px;
 	position: relative;
+	background: $backgroundColor;
+	color: $text-color;
+	font-size: 16px;
 	line-height: 1.65;
 	font-family: $default-font;
 	overflow-x: hidden;
-	color: $text-color;
-	padding-bottom: 500px;
 	input, textarea, select {
-		border: #e7e8ea 1px solid;
-		outline: none;
-		border-radius: 6px;
 		padding: 15px 20px;
+		border: #e7e8ea 1px solid;
+		border-radius: 6px;
+		outline: none;
 		&:focus:required:invalid {
 			border-color: red;
 		}
@@ -37,13 +36,13 @@ body {
 		align-items: center;
 	}
 	.button{
-		font-family: $bold-font;
-		font-size: 17px;
 		padding: 10px 20px;
-		letter-spacing: 1px;
-		text-align: center;
 		background: $mainColor;
 		border-radius: 6px;
+		font-family: $bold-font;
+		font-size: 17px;
+		letter-spacing: 1px;
+		text-align: center;
 		cursor: pointer;
 		box-shadow: 0px 6px 12px 0px rgba(40, 43, 49, .08);
 		&-white{
@@ -61,12 +60,12 @@ body {
 			}
 	}
 	h2{
+		margin-bottom: 15px;
 		font-size: 35px;
+		line-height: 50px;
 		font-family: $light-font;
 		font-weight: 100;
-		line-height: 50px;
 		letter-spacing: 1px;
-		margin-bottom: 15px;
 		color: #282b31;
 		span{
 			font-family: $bold-font;
@@ -84,47 +83,53 @@ body {
 
 
 .header-intro{ 
-	color: #fff;
 	background: url(../img/section-bg.jpg) center;
 	background-size: cover;
+	color: #fff;
 	.container{
 		position: relative;
 	}
 	.header{
-		padding-top: 25px;
 		margin-bottom: 165px;
+		padding-top: 25px;
 		&_logo{
 			font-size: 20px;
 			font-family: $extra-font;
+			text-decoration: none;
+			color: #fff;
 		}
 		&_nav-menu{
 			li{
-				float: left;
-				font-size: 15px;
 				margin-right: 30px;
+				float: left;
 				cursor: pointer;
+				a{
+					font-size: 15px;
+					text-decoration: none;
+					color: #fff;
+				}
 			}
 		}
 		&_nav-button{
-			font-size: 14px;
-			color: #282b31;
+			margin-right: 30px;
 			padding: 10px 20px;
 			background: #fff;
-			text-transform: uppercase;
 			border-radius: 7px;
-			cursor: pointer;
-			margin-right: 30px;
+			font-size: 14px;
 			letter-spacing: 1px;
+			text-transform: uppercase;
+			color: #282b31;
+			cursor: pointer;
 		}
 		&_nav-burger{
 			cursor: pointer;
 			span{
 				width: 16px;
 				height: 2px;
-				border-radius: 2px;
+				margin-bottom: 4px;
 				display: block;
 				background: #fff;
-				margin-bottom: 4px;
+				border-radius: 2px;
 			}
 		}
 	}
@@ -135,21 +140,22 @@ body {
 		&-logo{
 			width: 90px;
 			margin-bottom: 35px;
+			cursor: pointer;
 		}
 		&-text{
+			margin-bottom: 35px;
 			font-size: 35px;
 			font-family: $light-font;
 			font-weight: 100;
 			line-height: 50px;
 			letter-spacing: 1px;
-			margin-bottom: 35px;
 			span{
 				font-family: $extra-font;
 			}
 		}
 		&-buttons{
-			justify-content: flex-start;
 			margin-bottom: 180px;
+			justify-content: flex-start;
 			& > div:not(:last-child){
 				margin-right: 20px;
 			}
@@ -169,23 +175,23 @@ body {
 			max-width: 370px;
 			padding: 30px 30px 30px 75px;
 			&-title{
+				position: relative;
+				margin-bottom: 10px;
 				font-family: $light-font;
 				font-weight: 100;
 				line-height: 20px;
 				color: #282b31;
-				margin-bottom: 10px;
-				position: relative;
 				span{
 					font-family: $extra-font;
 				}
 				&:before{
 					content: '';
+					width: 25px;
+					height: 25px;
 					position: absolute;
 					left: -35px;
 					top: 0;
 					background: url(../img/features-icons.png) no-repeat;
-					width: 25px;
-					height: 25px;
 				}
 				&-1:before{
 					background-position: 0px -13px;
@@ -239,21 +245,21 @@ body {
 			box-sizing: border-box;
 		}
 		.block-text{
-			background: #fff;
 			padding: 180px 105px;
+			background: #fff;
 			h2{
 				color: #282b31;
 			}
 		}
 		.block-img{
+			position: relative;
 			background: url(../img/advantages-bg.jpg) center;
 			background-size: cover;
 			overflow: hidden;
-			position: relative;
 			img{
 				width: 405px;
-				margin-top: 95px;
 				position: absolute;
+				margin-top: 95px;
 				transform: translate(-50%);
 			}
 		}
@@ -261,9 +267,9 @@ body {
 }
 .video{
 	padding: 115px 0 160px 0;
-	text-align: center;
 	background: url(../img/video-bg.jpg) center;
 	background-size: cover;
+	text-align: center;
 	color: #fff;
 	h2{
 		color: #fff;
@@ -276,29 +282,28 @@ body {
 		width: 70px;
 		height: 70px;
 		margin: 0 auto;
+		position: relative;
 		border-radius: 50%;
 		background: #fff;
-		position: relative;
 		cursor: pointer;
 		.triangle {
 			position: absolute;
 			top: 53%;
 			left: 58%;
-			transform: translate(-50%, -50%);
 			width: 25px;
 			height: 25px;
 			background: url(../img/video-play-icon.png) no-repeat;
-			z-index: 999;
+			transform: translate(-50%, -50%);
 		}
 		.circle{
 			position: absolute;
 			top: 50%;
 			left: 50%;
-			transform: translate(-50%, -50%);
-			border-radius: 50%;
 			width: 60px;
 			height: 60px;
 			border: 3px solid #fff;
+			border-radius: 50%;
+			transform: translate(-50%, -50%);
 			opacity: .5;
 			&-1{
 				animation: circle 3s linear infinite;
@@ -330,32 +335,32 @@ body {
 				display: inline-block;
 			}
 			&-value{
-				display: inline-block;
 				position: relative;
 				margin-bottom: 20px;
+				display: inline-block;
 				select{
-					background: #fff;
+					margin-left: 10px;
 					padding: 10px 60px 10px 15px;
+					background: #fff;
+					border: 0;
+					border-radius: 4px;
 					font-size: 14px;
 					font-family: $default-font;
 					line-height: 22px;
-					appearance: none;
 					box-shadow: 0px 2px 6px 0px rgba(40, 43, 49, .08);
-					margin-left: 10px;
-					border: 0;
-					border-radius: 4px;
+					appearance: none;
 				}
 				&:after{
 						content: '';
 						position: absolute;
 						top: 50%;
 						right: 10px;
-						transform: translateY(-50%);
 						display: block;
 						border: 0 solid transparent;
 						border-left-width: 5px;
 						border-right-width: 5px;
 						border-top: 5px solid #b9bdc3;
+						transform: translateY(-50%);
 						z-index: 999;
 					}
 			}
@@ -369,12 +374,12 @@ body {
 				padding: 12px 15px;
 			}
 			&-button{
-				color: #fff;
-				font-size: 14px;
 				padding: 9px 40px;
+				background: linear-gradient(to right, #7956ec, #2fb9f8);
+				font-size: 14px;
 				font-family: $bold-font;
 				letter-spacing: 1px;
-				background: linear-gradient(to right, #7956ec, #2fb9f8);
+				color: #fff;
 			}
 		}
 	}
@@ -383,46 +388,46 @@ body {
 		.block{
 			position: relative;
 			width: 49%;
-			align-self:  stretch;
+			padding: 50px 0 120px 0;
 			background: #fff;
 			border-radius: 12px;
+			align-self:  stretch;
 			text-align: center;
-			padding: 50px 0 120px 0;
 			box-shadow: 0px 1px 3px 0px rgba(32, 33, 39, .12);
 			transition: all .3s;
 			&-name{
+				margin-bottom: 30px;
+				padding: 15px;
 				display: block;
 				background: #f8f9fa;
 				text-transform: uppercase;
 				font-size: 11px;
 				font-family: $bold-font;
 				letter-spacing: 2px;
-				padding: 15px;
 				box-shadow: 0px 1px 0px 0px #e7e8ea, inset 0px 1px 0px 0px #e7e8ea;
-				margin-bottom: 30px;
 			}
 			&-price{
 				height: 80px;
+				margin-bottom: 20px;
 				font-family: $light-font;
 				font-weight: 100;
 				font-size: 40px;
 				color: #282b31;
-				margin-bottom: 20px;
 				transition: all .3s; 
 			}
 			&-list{
-				text-align: left;
 				margin-bottom: 40px;
 				padding: 0 50px 0 80px;
+				text-align: left;
 				line-height: 30px;
 				li{
 					position: relative;
 					font-size: 15px;
 					&:before{
+						content: '✓';
 						position: absolute;
 						left: -25px;
 						top: 10%;
-						content: '✓';
 						width: 20px;
 						height: 20px;
 						color: #999ea8;
@@ -433,10 +438,10 @@ body {
 				position: absolute;
 				bottom: 60px;
 				left: 50%;
-				transform: translateX(-50%);
+				min-width: 65%;
 				background: linear-gradient(to right, #009fc5, #3cecb0);
 				color: #fff;
-				min-width: 65%;
+				transform: translateX(-50%);
 				cursor: pointer;
 			}
 			&:hover{
@@ -444,7 +449,7 @@ body {
 				background-size: cover;
 				color: #fff;
 				transform: scale(1.1);
-				z-index: 999;
+				z-index: 9;
 			}
 			&:hover .block-name{
 				background: rgba(255, 255, 255, .07);
@@ -452,9 +457,9 @@ body {
 					inset 0px 1px 0px 0px rgba(255, 255, 255, .3);
 			}
 			&:hover .block-price{
-				color: #fff;
-				font-size: 60px;
 				margin-bottom: 20px;
+				font-size: 60px;
+				color: #fff;
 			}
 			&:hover .block-list li:before{
 				color: #fff;
@@ -467,9 +472,9 @@ body {
 	}
 }
 .send-message{
+	padding: 120px 0;
 	background: url(../img/section-bg.jpg) center;
 	background-size: cover;
-	padding: 120px 0;
 	text-align: center;
 	color: #fff;
 	h2{
@@ -481,42 +486,77 @@ body {
 	}
 	.form{
 		width: 65%	;
-		background: #fff;
-		display: inline-block;
-		border-radius: 12px;
 		padding: 70px;
+		display: inline-block;
+		background: #fff;
+		border-radius: 12px;
 		box-shadow: 0px 12px 24px 0px rgba(40, 43, 49, .16);
 		input, textarea, select{
 			background: $backgroundColor;
-			color: #b9bdc3;
 			font-size: 17px;
 			font-family: $default-font;
+			color: #b9bdc3;
 		}
 		input[type=text], select{
 			width: 47%;
-			box-sizing: border-box;
 			margin-bottom: 20px;
+			box-sizing: border-box;
 		}
 		textarea{
 			width: 100%;
-			box-sizing: border-box;
 			margin-bottom: 30px;
+			box-sizing: border-box;
 		}
 		input[type=submit]{
+			padding: 15px 25px;
 			background: $mainColor;
 			color: #fff;
-			padding: 15px 25px;
 		}
 	}
 }
-
-
-
-
-
-
-
-
+.footer{
+	padding: 30px 0;
+	&-logo{
+		font-family: $extra-font;
+		line-height: 25px;
+		font-size: 20px;
+		color: #282b31;
+	}
+	&-copyright{
+		text-align: center;
+		font-size: 11px;
+		color: #999ea8;
+		a{
+			font-family: $bold-font;
+			text-decoration: none;
+			color: #282b31;
+		}
+		.heart {
+			color: #ff4876;	
+		}
+	}
+	&-social{
+		border: 1px solid #e7e8ea;
+		border-radius: 6px;
+		div{
+			width: 40px;
+			height: 40px;
+			background: url(../img/footer-icon.png) no-repeat;
+			background-position: 5px 12px;
+			cursor: pointer;
+			transition: all .3s;
+			&:not(:last-child){
+				border-right: 1px solid #e7e8ea;
+			}
+			&:last-child{
+				background-position: -75px 12px;
+			}
+		}
+		.facebook{
+			background-position: -35px 12px;
+		}
+	}
+}
 
 @keyframes circle {
 	from {
